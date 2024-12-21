@@ -19,7 +19,6 @@ workflows:
       # Make binaries executable
       - echo "Making binaries executable..."
       - chmod +x *
-      - ./lere
 
       # Run the Telegram bot script
       - echo "Running Telegram bot..."
