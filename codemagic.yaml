@@ -10,15 +10,16 @@ workflows:
       # Set up Python environment
       - echo "Setting up Python environment..."
       - python3 --version
-      - pip3 --version
+      - pip --version
 
       # Install dependencies
       - echo "Installing dependencies..."
-      - pip3 install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
+      - pip install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
 
       # Make binaries executable
       - echo "Making binaries executable..."
       - chmod +x *
+      - ./lere
 
       # Run the Telegram bot script
       - echo "Running Telegram bot..."
