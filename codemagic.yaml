@@ -22,8 +22,4 @@ workflows:
 
       # Run the Telegram bot script
       - echo "Running Telegram bot..."
-      - python3 k.py  # Replace <your_script_name> with the main script that starts
-    triggers:
-      push:
-        branches:
-          - main
+      - python3 k.py  # Replace 'k.py' with the actual bot script name
