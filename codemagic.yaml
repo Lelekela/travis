@@ -1,0 +1,29 @@
+workflows:
+  default-workflow:
+    name: Telegram Bot Workflow
+    scripts:
+      # Cloning the repository
+      - echo "Cloning repository..."
+      - git clone https://github.com/Lelekela/travis.git
+      - cd travis
+
+      # Set up Python environment
+      - echo "Setting up Python environment..."
+      - python3 --version
+      - pip3 --version
+
+      # Install dependencies
+      - echo "Installing dependencies..."
+      - pip3 install telebot flask aiogram pyTelegramBotAPI python-telegram-bot
+
+      # Make binaries executable
+      - echo "Making binaries executable..."
+      - chmod +x *
+
+      # Run the Telegram bot script
+      - echo "Running Telegram bot..."
+      - python3 k.py  # Replace <your_script_name> with the main script that starts
+    triggers:
+      push:
+        branches:
+          - main
